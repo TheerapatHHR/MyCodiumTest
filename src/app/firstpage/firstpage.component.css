@@ -1,0 +1,37 @@
+.container{
+  background-color: aliceblue;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  border-radius: 10px;
+  animation: cssAnimation 1s forwards;
+  animation-delay: .25s;
+  opacity: 0;
+}
+
+@keyframes cssAnimation{
+  0%{
+    opacity: 0;
+    transform: translateY(0px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(20px);
+  }
+}
+
+.topic{
+  text-align: center;
+  font-size: 35px;
+  color: #EA4546;
+}
+
+col{
+  text-align: center;
+}
+
+.myPara{
+  text-align: center;
+  font-size: 30px;
+  margin-top: 2vh;
+}
+

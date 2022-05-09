@@ -1,0 +1,76 @@
+
+<div class="container">
+  <div class="row">
+  <div class="col-md-5">
+    <h2>Please Enter your Task</h2>
+    <form #postForm="ngForm" (ngSubmit)="onCreatePost(postForm.value); postForm.resetForm();">
+      <div class="form-group">
+        <label for="taks">Task</label>
+        <input
+        type="text"
+        class="form-control"
+        id="task"
+        required
+        ngModel
+        name="task"
+        >
+      </div>
+      <div class="form-group">
+        <label for="detail">Detail</label>
+        <textarea
+        name="detail"
+        id="detail"
+        class="form-control"
+        required
+        ngModel
+        ></textarea>
+      </div>
+      <button
+      class="btn btn-success"
+      type="submit"
+      [disabled]="!postForm.valid"
+      >add</button>
+    </form>
+    <hr>
+    <p>*please press reload after add or done the task.</p>
+    <div class="col-md-6">
+      <button class="btn btn-primary" (click)="onFetchPosts()">
+        Reload
+      </button>
+      |
+      <button
+        class="btn btn-danger"
+        [disabled]="loadedPosts.length < 1"
+        (click)="onClearPosts()"
+      >
+        Clear All
+      </button>
+    </div>
+  </div>
+  <div class="col-md-7">
+    <p *ngIf="loadedPosts.length < 1 && !isFetching">
+      Great, You have done all your task!
+    </p>
+    <ul class="list-group" *ngIf="loadedPosts.length >= 1 && !isFetching">
+      <li class="list-group-item" *ngFor="let post of loadedPosts">
+        <h3>{{ post.task }}</h3>
+        <p>{{ post.detail }}</p>
+        <button
+        class="btn btn-success"
+        (click)="onFinish(post.status,post.id)"
+        >
+        Done
+      </button>
+      </li>
+    </ul>
+    <p *ngIf="isFetching && !error">Loading...</p>
+    <div class="alert alert-danger" *ngIf="error">
+      <h1>An Error Occurred!</h1>
+      <p>{{ error }}</p>
+      <button class="btn-danger" (click)="onHandleError()">Okay</button>
+  </div>
+</div>
+  </div>
+
+</div>
+

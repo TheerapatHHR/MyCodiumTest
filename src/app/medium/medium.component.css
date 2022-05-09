@@ -1,0 +1,42 @@
+.topic{
+  background-color: aliceblue;
+  padding: 5px 5px 5px 5px;
+  border-radius: 5px;
+  width: 50%;
+  margin: auto;
+  font-size: large;
+  animation: cssAnimation 1s forwards;
+  animation-delay: .25s;
+  opacity: 0;
+}
+
+@keyframes cssAnimation{
+  0%{
+    opacity: 0;
+    transform: translateY(0px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(10px);
+  }
+}
+
+.answer{
+  background-color: aliceblue;
+  padding: 5px 5px 5px 5px;
+  border-radius: 5px;
+  margin-top: 2vh;
+  text-align: center;
+  animation: cssAnimation 1s forwards;
+  animation-delay: .25s;
+  opacity: 0;
+}
+
+.box{
+  display: inline-block;
+  margin: 1vw;
+  animation: cssAnimation 1s forwards;
+  animation-delay: .25s;
+  opacity: 0;
+}
+

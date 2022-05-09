@@ -1,0 +1,16 @@
+<div class="topic">
+  <p>Write a program that finds all prime numbers up to n for input n.</p>
+<input type="number" class="form-control" [(ngModel)]="num">
+<button
+class="btn btn-success"
+(click)="primeCheck()"
+>
+check
+</button>
+</div>
+
+<div class="answer">
+  <h3>All prime number</h3>
+  <div class="box" *ngFor="let num of answer">{{ num }}</div>
+  <!-- <p>{{ answer }}</p> -->
+</div>

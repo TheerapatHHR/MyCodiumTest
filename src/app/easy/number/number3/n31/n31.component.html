@@ -1,0 +1,12 @@
+
+<div *ngIf="num != null;" class="container">
+  <p>3.1)</p>
+  <p>n = {{ num }}</p>
+  <table>
+    <tr script="buildStar(num)" *ngFor="let row of round" class="row">
+      <td *ngFor="let col of round">
+        <div class="cell">{{ star[(row - 1) * num + col - 1] }}</div>
+      </td>
+    </tr>
+  </table>
+</div>

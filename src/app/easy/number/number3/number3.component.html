@@ -1,0 +1,20 @@
+<div class="topic">
+  <h3>Write a program that produce the following output giving an integer input n.</h3>
+<input type="number" class="form-control" [(ngModel)]="number">
+<button class="btn btn-success" (click)="onProcess()">submit</button>
+</div>
+
+<hr *ngIf="num != null;">
+<div class="content">
+  <div class="row">
+    <div class="col-sm-4"><app-n31></app-n31></div>
+    <div class="col-sm-4"><app-n32></app-n32></div>
+    <div class="col-sm-4"><app-n33></app-n33></div>
+  </div>
+  <hr *ngIf="num != null;">
+  <div class="row">
+    <div class="col-sm-4"><app-n34></app-n34></div>
+    <div class="col-sm-4"><app-n35></app-n35></div>
+    <div class="col-sm-4"><app-n36></app-n36></div>
+  </div>
+</div>

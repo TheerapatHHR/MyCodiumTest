@@ -1,0 +1,22 @@
+<div class="topic">
+  <h2>Number 1</h2>
+      <p>
+        Write a program that prints the numbers from 1 to 100. But for multiples
+        of three print “Fizz” instead of the number and for the multiples of
+        five print “Buzz”. For numbers which are multiples of both three and
+        five print “FizzBuzz”.
+      </p>
+</div>
+
+
+<div class="mytable">
+        <table>
+          <tr *ngFor="let row of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]">
+            <td *ngFor="let col of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]">
+              <!-- <div class="cell">{{ answer1[(row - 1) * 10 + col - 1] }}</div> -->
+              {{ answer1[(row - 1) * 10 + col - 1] }}
+            </td>
+          </tr>
+        </table>
+      </div>
+

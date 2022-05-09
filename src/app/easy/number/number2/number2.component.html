@@ -1,0 +1,21 @@
+<div class="topic">
+  <h2>Number 2</h2>
+<p>
+  Write a program that determine whether or not an integer input is a leap year.
+</p>
+<input type="number" class="form-control" [(ngModel)]="year" >
+<button
+class="btn btn-success"
+(click)="onCheck()"
+>
+check
+</button>
+</div>
+
+
+<div class="form-group">
+  <div class="topicAnswer">
+    <h3>Is your integer is leap year?</h3>
+    <span> Your integer is  </span><span id="status">{{ yearStatus }}</span>
+  </div>
+</div>

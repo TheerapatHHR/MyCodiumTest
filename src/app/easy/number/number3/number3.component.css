@@ -1,0 +1,39 @@
+.cell{
+  width: 2rem;
+}
+
+.topic{
+  background-color: aliceblue;
+  padding: 5px 5px 5px 5px;
+  border-radius: 5px;
+  animation: cssAnimation 1s forwards;
+  animation-delay: .25s;
+  opacity: 0;
+}
+
+.content{
+  background-color: aliceblue;
+  padding: 5px 8px 5px 8px;
+  border-radius: 5px;
+  margin-top: 2vh;
+  animation: cssAnimation 1s forwards;
+  animation-delay: .5s;
+  opacity: 0;
+}
+
+@keyframes cssAnimation{
+  0%{
+    opacity: 0;
+    transform: translateY(0px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(20px);
+  }
+}
+
+.container{
+  width: auto;
+}
+
+
